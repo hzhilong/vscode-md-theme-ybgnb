@@ -185,6 +185,6 @@ blockquote {
     border-radius: 2px;
 }
 
-blockquote:last-child {
+blockquote p:last-child {
     margin-bottom: 0;
 }
