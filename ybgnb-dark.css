@@ -1,3 +1,5 @@
+/* https://github.com/hzhilong/vscode-md-theme-ybgnb */
+
 :root {
     /* 正文字体 */
     --text-font: "更纱黑体 UI SC";
@@ -95,6 +97,7 @@
 html {
     padding-left: 10px;
     padding-right: 10px;
+    background-color: var(--bg-color);
 }
 
 body {
@@ -166,15 +169,23 @@ a:hover {
     text-decoration: none;
 }
 
+/* 列表缩进 */
 ul, ol {
-    padding-inline-start: 20px;
+    padding-inline-start: 1.5em;
 }
 
+/* 脚注 */
 .footnote-ref{
     background-color: inherit;
     color: var(--footnote-sup-color);
 }
 
+.footnote-ref a{
+    border-bottom: none;
+    margin-left: 2px;
+}
+
+/* 引用 */
 blockquote {
     color: var(--blockquote-color);
     border-radius: 2px;
@@ -183,8 +194,93 @@ blockquote {
     position: relative;
     border-left: 4px solid var(--blockquote-border-color);
     border-radius: 2px;
+    margin-bottom: 0.7rem;
 }
 
 blockquote p:last-child {
     margin-bottom: 0;
+}
+
+/* 行内代码 */
+code{
+    font-family: var(--code-font) !important;
+    border-radius: 3px;
+    color: var(--inline-code-color);
+    padding: 0 2px;
+    margin: 0 1px;
+    background-color: var(--inline-code-bg-color);
+}
+
+/* 代码块 */
+body.wordWrap pre{
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    line-height: var(--code-block-line-height);
+    font-size: 1rem;
+    padding: 0.7rem !important;
+    border-radius: 3px;
+}
+
+body.wordWrap pre code{
+    color: var(--code-block-color);
+    background-color: var(--code-block-bg-color);
+    padding: 0;
+    margin: 0;
+}
+
+/* 表格 */
+table {
+    border-top: 1px solid var(--table-border-color);
+    border-left: 1px solid var(--table-border-color);
+}
+
+table th {
+    color: var(--title-color);
+    font-weight: bold;
+    padding: 6px 13px;
+    border-right: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+table td {
+    padding: 6px 13px;
+    border-right: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+
+/* checkbox 复选框 */
+.task-list-item-checkbox input[type=checkbox] {
+    /* 清除默认样式 */
+    appearance: none;
+    -webkit-appearance: none;
+    /* 自定义样式 */
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--checkbox-bg-color);
+    border-radius: .2rem;
+    border: none !important;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: -1.2rem;
+    transform: translate(0, -50%);
+}
+
+.task-list-item-checkbox input:checked[type=checkbox] {
+    background-color: var(--checkbox-checked-bg-color);
+}
+
+.task-list-item-checkbox input:checked[type=checkbox]::before {
+    content: "";
+    position: absolute;
+    left: 0.3rem;
+    top: 0.1rem;
+    width: 0.4rem;
+    height: 0.7rem;
+    border: solid var(--checkbox-checked-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
