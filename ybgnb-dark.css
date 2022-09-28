@@ -251,7 +251,7 @@ table td {
 
 
 /* checkbox 复选框 */
-.task-list-item-checkbox input[type=checkbox] {
+.task-list-item-checkbox[type=checkbox] {
     /* 清除默认样式 */
     appearance: none;
     -webkit-appearance: none;
@@ -268,20 +268,24 @@ table td {
     transform: translate(0, -50%);
 }
 
-.task-list-item-checkbox input:checked[type=checkbox] {
+.task-list-item-checkbox:checked[type=checkbox] {
     background-color: var(--checkbox-checked-bg-color);
 }
 
-.task-list-item-checkbox input:checked[type=checkbox]::before {
+.task-list-item-checkbox:checked[type=checkbox]::before {
     content: "";
     position: absolute;
     left: 0.3rem;
-    top: 0.1rem;
-    width: 0.4rem;
-    height: 0.7rem;
+    top: 0.1rem;    
+    width: 0.2rem;
+    height: 0.5rem;
     border: solid var(--checkbox-checked-color);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+body.showEditorSelection :not(tr).code-active-line:before, body.showEditorSelection :not(tr).code-line:hover:before{
+    left: -1.5rem;
 }
