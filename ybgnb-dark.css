@@ -162,9 +162,8 @@ a {
     text-decoration: none;
 }
 
-hr {
-    background: var(--horizontal-divider-color);
-    border-color: var(--horizontal-divider-color);
+a:hover {
+    text-decoration: none;
 }
 
 ul, ol {
@@ -174,4 +173,18 @@ ul, ol {
 .footnote-ref{
     background-color: inherit;
     color: var(--footnote-sup-color);
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: 4px solid var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote:last-child {
+    margin-bottom: 0;
 }
