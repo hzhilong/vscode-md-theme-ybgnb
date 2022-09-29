@@ -8,12 +8,14 @@
 
 ## 样式预览
 
+![img](https://cdn.jsdelivr.net/gh/hzhilong/person-picture@main/img/2022-09/20220929072040-1664407241.png)
+
 ## 使用指南
 
 VS Code 设置 - 扩展 - Markdown - Styles 添加以下url
 
 ```url
-https://cdn.jsdelivr.net/gh/hzhilong/vscode-md-theme-ybgnb/ybgnb-dark.css
+https://cdn.jsdelivr.net/gh/hzhilong/vscode-md-theme-ybgnb@1.0/ybgnb-dark.css
 ```
 
 本主题所用字体为 `更纱黑体 UI` 和 `等距更纱黑体` ：[Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic)
