@@ -18,6 +18,8 @@ VS Code 设置 - 扩展 - Markdown - Styles 添加以下url
 https://cdn.jsdelivr.net/gh/hzhilong/vscode-md-theme-ybgnb@1.0/ybgnb-dark.css
 ```
 
+> 其中【1.0】为发布的版本，请根据最新的版本来更改URL
+
 本主题所用字体为 `更纱黑体 UI` 和 `等距更纱黑体` ：[Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic)
 
 注意：
