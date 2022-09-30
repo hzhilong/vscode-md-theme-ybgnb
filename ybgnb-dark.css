@@ -255,6 +255,10 @@ table td {
 }
 
 /* checkbox 复选框 */
+.task-list-item{
+    position: relative;
+}
+
 .task-list-item-checkbox[type="checkbox"] {
     /* 清除默认样式 */
     appearance: none;
