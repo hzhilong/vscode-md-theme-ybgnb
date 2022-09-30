@@ -293,3 +293,7 @@ body.showEditorSelection :not(tr).code-active-line:before, body.showEditorSelect
 ul + p, ol + p {
     margin-top: 0.7em;
 }
+
+kbd {
+    background-color: #80808063 !important;
+}
