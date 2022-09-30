@@ -92,6 +92,8 @@
     --md-notification-shadow-color: #ffffff2e;
     /* 搜索结果选中文字 */
     --search-select-bg-color: #c34f45;
+    /* kbd */
+    --kbd-bg-color: #80808063;
 }
 
 html {
@@ -113,6 +115,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--text-font);
     color: var(--title-color);
 }
 
@@ -123,12 +126,11 @@ h1 {
     margin-bottom: 2rem;
 }
 
-
 h2 {
     font-size: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    border-bottom: .1rem solid var(--h2-underline-color);
+    border-bottom: 0.1rem solid var(--h2-underline-color);
 }
 
 h3 {
@@ -138,7 +140,7 @@ h3 {
 }
 
 h3 .md-plain {
-    border-bottom: .15rem solid var(--h3-underline-color);
+    border-bottom: 0.15rem solid var(--h3-underline-color);
     padding-bottom: 0.2rem;
 }
 
@@ -171,17 +173,18 @@ a:hover {
 }
 
 /* 列表缩进 */
-ul, ol {
+ul,
+ol {
     padding-inline-start: 1.5em;
 }
 
 /* 脚注 */
-.footnote-ref{
+.footnote-ref {
     background-color: inherit;
     color: var(--footnote-sup-color);
 }
 
-.footnote-ref a{
+.footnote-ref a {
     border-bottom: none;
     margin-left: 2px;
 }
@@ -203,7 +206,7 @@ blockquote p:last-child {
 }
 
 /* 行内代码 */
-code{
+code {
     font-family: var(--code-font) !important;
     border-radius: 3px;
     color: var(--inline-code-color);
@@ -213,7 +216,8 @@ code{
 }
 
 /* 代码块 */
-body.wordWrap pre{
+body.wordWrap pre {
+    font-family: var(--code-font);
     background-color: var(--code-block-bg-color);
     color: var(--code-block-color);
     line-height: var(--code-block-line-height);
@@ -222,7 +226,8 @@ body.wordWrap pre{
     border-radius: 3px;
 }
 
-body.wordWrap pre code{
+body.wordWrap pre code {
+    font-family: var(--code-font);
     color: var(--code-block-color);
     background-color: var(--code-block-bg-color);
     padding: 0;
@@ -231,27 +236,26 @@ body.wordWrap pre code{
 
 /* 表格 */
 table {
-    border-top: 1px solid var(--table-border-color)!important;
-    border-left: 1px solid var(--table-border-color)!important;
+    border-top: 1px solid var(--table-border-color) !important;
+    border-left: 1px solid var(--table-border-color) !important;
 }
 
 table th {
     color: var(--title-color);
     font-weight: bold;
     padding: 6px 13px;
-    border-right: 1px solid var(--table-border-color)!important;
-    border-bottom: 1px solid var(--table-border-color)!important;
+    border-right: 1px solid var(--table-border-color) !important;
+    border-bottom: 1px solid var(--table-border-color) !important;
 }
 
 table td {
     padding: 6px 13px;
-    border-right: 1px solid var(--table-border-color)!important;
-    border-bottom: 1px solid var(--table-border-color)!important;
+    border-right: 1px solid var(--table-border-color) !important;
+    border-bottom: 1px solid var(--table-border-color) !important;
 }
 
-
 /* checkbox 复选框 */
-.task-list-item-checkbox[type=checkbox] {
+.task-list-item-checkbox[type="checkbox"] {
     /* 清除默认样式 */
     appearance: none;
     -webkit-appearance: none;
@@ -259,7 +263,7 @@ table td {
     height: 1rem;
     width: 1rem;
     background-color: var(--checkbox-bg-color);
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     border: none !important;
     margin: 0;
     position: absolute;
@@ -268,15 +272,15 @@ table td {
     transform: translate(0, -50%);
 }
 
-.task-list-item-checkbox:checked[type=checkbox] {
+.task-list-item-checkbox:checked[type="checkbox"] {
     background-color: var(--checkbox-checked-bg-color);
 }
 
-.task-list-item-checkbox:checked[type=checkbox]::before {
+.task-list-item-checkbox:checked[type="checkbox"]::before {
     content: "";
     position: absolute;
     left: 0.3rem;
-    top: 0.1rem;    
+    top: 0.1rem;
     width: 0.2rem;
     height: 0.5rem;
     border: solid var(--checkbox-checked-color);
@@ -286,14 +290,24 @@ table td {
     transform: rotate(45deg);
 }
 
-body.showEditorSelection :not(tr).code-active-line:before, body.showEditorSelection :not(tr).code-line:hover:before{
+body.showEditorSelection :not(tr).code-active-line:before,
+body.showEditorSelection :not(tr).code-line:hover:before {
     left: -1.5rem;
 }
 
-ul + p, ol + p {
+ul + p,
+ol + p {
     margin-top: 0.7em;
 }
 
 kbd {
-    background-color: #80808063 !important;
+    color: var(--vscode-editor-foreground);
+    background-color: var(--kbd-bg-color) !important;
+    font-size: 14px;
+    font-family: 新宋体;
+    font-family: var(--text-font) !important;
+    padding: 1px 3px;
+    box-shadow: 1px 1px 0px 1px #555555;
+    border: none;
+    border-radius: 2px;
 }
