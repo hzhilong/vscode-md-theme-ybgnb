@@ -304,8 +304,7 @@ kbd {
     color: var(--vscode-editor-foreground);
     background-color: var(--kbd-bg-color) !important;
     font-size: 14px;
-    font-family: 新宋体;
-    font-family: var(--text-font) !important;
+    font-family: monospace;
     padding: 1px 3px;
     box-shadow: 1px 1px 0px 1px #555555;
     border: none;
