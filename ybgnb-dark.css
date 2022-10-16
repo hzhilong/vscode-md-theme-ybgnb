@@ -208,6 +208,7 @@ blockquote p:last-child {
 /* 行内代码 */
 code {
     font-family: var(--code-font) !important;
+    font-variant-ligatures: none;
     border-radius: 3px;
     color: var(--inline-code-color);
     padding: 0 2px;
@@ -218,6 +219,7 @@ code {
 /* 代码块 */
 body.wordWrap pre {
     font-family: var(--code-font);
+    font-variant-ligatures: none;
     background-color: var(--code-block-bg-color);
     color: var(--code-block-color);
     line-height: var(--code-block-line-height);
@@ -228,6 +230,7 @@ body.wordWrap pre {
 
 body.wordWrap pre code {
     font-family: var(--code-font);
+    font-variant-ligatures: none;
     color: var(--code-block-color);
     background-color: var(--code-block-bg-color);
     padding: 0;
