@@ -104,6 +104,7 @@ html {
 
 body {
     font-family: var(--text-font) !important;
+    font-size: var(--text-size) !important;
     color: var(--text-color);
     padding-left: 1rem;
     padding-right: 1rem;
@@ -282,9 +283,9 @@ table td {
     border: none !important;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: -1.2rem;
-    transform: translate(0, -50%);
+    transform: translate(0, 27%);
 }
 
 .task-list-item-checkbox:checked[type="checkbox"] {
